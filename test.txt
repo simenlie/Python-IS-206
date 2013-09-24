@@ -1,0 +1,3 @@
+Dette er en test fil brukt sammen med python. 
+Den blir brukt for å lese filer etc.
+Dette er kun en test ja
