@@ -1,0 +1,23 @@
+The Islands
+
+The player starts in England where he tries to win a boat
+After this his adventure starts.
+He must visit several Islands to be in the possession of the gold and kill the monsters that come along.
+
+Vinne spillet med kommandoer:
+> play
+> clock
+> nord
+> use phone
+> yes
+
+> sor
+> sword
+> point
+> slay
+> point
+> slay
+> point
+> slay
+> hidden
+> stay
