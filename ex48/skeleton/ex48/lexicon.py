@@ -1,11 +1,7 @@
-
-
 dir= ["north","south","east","west","down","up","left","right","back"]
 verbs = ["go","stop","kill","eat"]
 stop = ["the","in","of","from","at","it"]
 nouns = ["door","bear","princess","cabinet"]
-numbers = [1,2,3,4,5,6,7,8,9]
-
 
 def convert_number(s):
     try:
@@ -34,7 +30,7 @@ def scan(param):
 			sentence.append(('error',word))
 	return sentence
 
+#Bare brukt for slik at brukeren kan skrive inn en setning for å teste
 input = raw_input("> ")
 
 print scan(input)
-
