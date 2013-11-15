@@ -2,10 +2,10 @@ Python-IS-206
 =============
 Kjøre spillet fra Exercise 52
 =============================
-  step 1: git clone
-  step 2: Skrive inn $env:PYTHONPATH = "$env:PYTHONPATH;." (PowerShell)
-  step 3: Kjøre bin/app.py
-  step 4: Åpne localhost og spill
+  - git clone
+  - Skrive inn $env:PYTHONPATH = "$env:PYTHONPATH;." (PowerShell)
+  - Kjøre bin/app.py
+  - Åpne localhost og spill
 
 Om spillet
 ==========
