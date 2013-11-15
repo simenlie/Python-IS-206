@@ -10,8 +10,8 @@ Kjøre spillet fra Exercise 52
 Om spillet
 ==========
 Det første du gjøre er å lage et brukernavn.
-Mens du spiller vil scoren din øke, samt at du vil få nye items
-hvis du dør eller vinner og velger spill igjen, vil du få med din forrige score,
+Mens du spiller vil scoren din øke, samt at du vil få nye items.
+Hvis du dør eller vinner og velger spill igjen, vil du få med din forrige score,
 slik at du kan prøve å slå din gamle score.
 
 Kommandoer for å vinne/gå igjennom spillet:
