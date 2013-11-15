@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>Login</title>
+    <style type="text/css">
+      .label {text-align: right}
+      .error {color: red}
+    </style>
+
+  </head>
+  <body>
+  <h1>Login</h1>
+<form method="post">
+
+<label>
+Username
+<input  type="text" name="username" value="{{username}}">
+</label>
+<br>
+<label>
+Password
+<input  type="text" name="password" value="{{password}}">
+</label>
+<br>
+<label>
+<div style="color: red">{{error}}</div>
+</label>
+<input type="submit">
+</form>
+
+  </body>
+
+</html>

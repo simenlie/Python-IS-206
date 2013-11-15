@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Simens blogg</title>
+</head>
+<style type="text/css">
+body {
+	margin:50px 0px; padding-left:10%; 
+	text-align:center;
+	font-family: Monaco, Consolas, Menlo, 'Lucida Console', 'Ubuntu Mono', 'Droid Sans Mono', 'Courier New', monospace;
+	}
+.art {
+	width:90%;
+	
+	text-align:left;
+	}
+.art-title {
+font-size:x-large;
+font-weight:bold;
+
+text-align:left;
+display:inline-block;
+	}
+.top {
+
+border-bottom: solid thick #000000;
+
+	}
+.art-body {
+font-size:medium;
+text-align:right;
+float:right;
+color: #a2a3a4;
+	}
+hr {
+  color: #000;
+background-color: #000;
+height: 5px;
+}
+</style>
+<body>
+<h1>Simens Blogg</h1>
+
+
+{% for blog in blogs %}
+<div class="art">
+<div top class="top">
+<div class="art-title">{{blog.subject}}</div>
+<span class="art-body">{{blog.created.date()}}</span>
+</div>
+<pre class="art-body2">{{blog.content}}
+
+</div>
+
+{% endfor %}
+</body>
+</html>

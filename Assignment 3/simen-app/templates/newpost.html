@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Simens blogg</title>
+</head>
+<style type="text/css">
+a:link {text-decoration:none;color:#000;}
+a:visited {text-decoration:none;color:#000;}
+a:hover {text-decoration:none;color:#000;}
+a:active {text-decoration:none;color:#000;}
+</style>
+
+<body>
+<a href="/blog">
+<h1>Simens Blogg</h1>
+</a>
+<form method="post">
+<label>
+<div>Subject</div>
+<input type="text" name ="subject" value="{{subject}}">
+</label>
+<label>
+<div>Content</div>
+<textarea name ="content">{{content}}</textarea>
+</label>
+<div class="error">{{error}}</div>
+<input type="submit" name="Send">
+</form>
+
+<hr>
+
+</body>
+</html>
