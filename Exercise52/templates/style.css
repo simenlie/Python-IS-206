@@ -1,0 +1,80 @@
+.brodtekst {
+	font-family: 'Calibri Light';
+	font-style: normal;
+	font-size: 16px;
+}
+.overskrift {
+	font-family: 'Calibri Light';
+	font-style: normal;
+	font-size: 24px;
+	padding-left: 0.5em;
+	padding-top: 0.5em;
+}
+p {
+	font-family: 'Calibri Light';
+	font-style: normal;
+	font-size: 18px;
+	padding-left: 0.7em;
+}
+
+#imga {
+	left: 14px;
+	position: absolute;
+	padding-top: 6px;
+	width: 100px;
+	height: 29px;
+	background-image: url(button.png);
+}
+#imga a:link {
+	color: #ffffff;
+	text-decoration: none;
+}
+#imga a:visited {
+	color: #ffffff;
+}
+#imga a:active {
+	color: red;
+}
+#simen {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 50px;
+	background-color: #f9f9f9;
+	border-bottom: 1px solid;
+	border-color: #e4e4e4;
+}
+#simen2 {
+	padding-top: 5px;
+}
+#simen3 {
+	position: relative;
+	top: 0px;
+	left: 25%;
+	width: 50%;
+}
+
+#kropp {
+	position: absolute;
+	left: 25%;
+	top: 100px;
+	width: 50%;
+	height: 150px;
+	background-color: #f9f9f9;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+ul {
+	float: right;
+	font-family: 'Calibri Light';
+	font-style: normal;
+	font-size: 16px;
+}
+ul li {
+	display: inline;
+	padding-left: 2em;
+	/*overflow: hidden;*>*/
+}
+

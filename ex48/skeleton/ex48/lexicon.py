@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 dir= ["north","south","east","west","down","up","left","right","back"]
 verbs = ["go","stop","kill","eat"]
 stop = ["the","in","of","from","at","it"]
@@ -31,6 +32,6 @@ def scan(param):
 	return sentence
 
 #Bare brukt for slik at brukeren kan skrive inn en setning for å teste
-input = raw_input("> ")
+#input = raw_input("> ")
 
-print scan(input)
+#print scan(input)
