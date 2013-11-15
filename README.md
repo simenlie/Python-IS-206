@@ -5,6 +5,7 @@ Python-IS-206
 - Excercise 45
 - Exercise 52
 - App-engine
+
 Exercise 52 - Instruksjoner
 =============================
   - git clone
