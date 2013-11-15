@@ -12,6 +12,7 @@ Exercise 52 - Instruksjoner
   - Skrive inn $env:PYTHONPATH = "$env:PYTHONPATH;." (PowerShell)
   - Kjøre bin/app.py
   - Åpne localhost og spill
+  - (sessions blir lagret i /sessions -og kan slettes fra denne mappen, hvis ønskelig)
 
 Om spillet
 ==========
