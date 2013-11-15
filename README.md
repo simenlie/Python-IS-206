@@ -1,6 +1,11 @@
 Python-IS-206
 =============
-Kjøre spillet fra Exercise 52
+- Exercise 22
+- Exercise 26
+- Excercise 45
+- Exercise 52
+- App-engine
+Exercise 52 - Instruksjoner
 =============================
   - git clone
   - Skrive inn $env:PYTHONPATH = "$env:PYTHONPATH;." (PowerShell)
@@ -35,3 +40,7 @@ Kommandoer for å vinne/gå igjennom spillet:
   - sail
   - hidden
   - back
+
+App Engine
+==========
+  - http://simen-app.appspot.com/
