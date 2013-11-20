@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block overskrift %}<a href="/"><img src="home.png"></a> ROT13{% endblock %}
+{% block body %}
+	<form method="post">
+	<h1>Enter some text to ROT13:</h1>
+	<textarea name="text">{{text}}</textarea>
+	<br>
+	<p class="submit">
+		<input type="submit" value="Rotate">
+	</p>
+
+	</form>
+{% endblock %}
+{% block link %}<a href=../> Back</a>{% endblock %}

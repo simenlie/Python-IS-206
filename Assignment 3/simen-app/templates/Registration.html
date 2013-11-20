@@ -1,44 +1,49 @@
-<html>
-  <head>
-    <title>Sign Up</title>
-    <style type="text/css">
-      .label {text-align: right}
-      .error {color: red}
-    </style>
+{% extends "base.html" %}
+{% block overskrift %}<a href="/"><img src="../home.png"></a> Simens blogg{% endblock %}
+{% block body %}
 
-  </head>
-  <body>
   <h1>Signup</h1>
+  <hr>
 <form method="post">
 
 <label>
 Username
+<br>
 <input  type="text" name="username" value="{{username}}">
+<br>
 <span style="color: red">{{error2}}</span>
 </label>
 <br>
 <label>
 Password
-<input  type="text" name="password" value="{{password}}">
+<br>
+<input  type="password" name="password" value="{{password}}">
+<br>
 <span style="color: red">{{error4}}</span>
 </label>
 <br>
 <label>
 Verify Password
-<input  type="text" name="verify" value="{{verify}}">
+<br>
+<input  type="password" name="verify" value="{{verify}}">
+<br>
 <span style="color: red">{{error}}</span>
 </label>
 <br>
 <label>
 Email(optional)
+<br>
 <input  type="text" name="email" value="{{email}}">
+<br>
 <span style="color: red">{{error3}}</span>
+
 </label>
 
-<br>
+
+<p class="submit">
 <input type="submit">
+</p>
 </form>
 
-  </body>
-
-</html>
+{% endblock %}
+{% block link %}<a href=../> Back</a>{% endblock %}

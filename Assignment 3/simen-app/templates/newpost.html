@@ -1,21 +1,11 @@
-<!DOCTYPE html>
+{% extends "base.html" %}
 
-<html>
-<head>
-<title>Simens blogg</title>
-</head>
-<style type="text/css">
-a:link {text-decoration:none;color:#000;}
-a:visited {text-decoration:none;color:#000;}
-a:hover {text-decoration:none;color:#000;}
-a:active {text-decoration:none;color:#000;}
-</style>
+{% block overskrift %}<a href="/"><img src="../home.png"></a> Simens blogg{% endblock %}
+{% block body %}
 
-<body>
-<a href="/blog">
-<h1>Simens Blogg</h1>
-</a>
-<form method="post">
+<h1>New post</h1>
+<hr>
+<form method="post" class="label">
 <label>
 <div>Subject</div>
 <input type="text" name ="subject" value="{{subject}}">
@@ -25,10 +15,15 @@ a:active {text-decoration:none;color:#000;}
 <textarea name ="content">{{content}}</textarea>
 </label>
 <div class="error">{{error}}</div>
+<p class="submit">
 <input type="submit" name="Send">
+</p>
 </form>
 
-<hr>
 
-</body>
-</html>
+
+{% endblock %}
+{% block link %}<a href=../blog> Back to blog</a>{% endblock %}
+
+
+

@@ -1,32 +1,31 @@
-<html>
-  <head>
-    <title>Login</title>
-    <style type="text/css">
-      .label {text-align: right}
-      .error {color: red}
-    </style>
+{% extends "base.html" %}
 
-  </head>
-  <body>
-  <h1>Login</h1>
+{% block overskrift %}<a href="/"><img src="../home.png"></a> Simens blogg {% endblock %}
+{% block body %}
+<h1>Login</h1>
+  <hr>
 <form method="post">
 
 <label>
-Username
+Username<br>
 <input  type="text" name="username" value="{{username}}">
 </label>
 <br>
 <label>
-Password
-<input  type="text" name="password" value="{{password}}">
+Password<br>
+<input  type="password" name="password" value="{{password}}">
 </label>
 <br>
 <label>
 <div style="color: red">{{error}}</div>
 </label>
+<p class="submit">
 <input type="submit">
+</p>
 </form>
+{% endblock %}
+{% block blink %}<a href=signup> Sign up </a><br><br>{% endblock %}
+{% block link %}<a href=../> Back</a>{% endblock %}
 
-  </body>
 
-</html>
+

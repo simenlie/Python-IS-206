@@ -1,0 +1,180 @@
+# -*- coding: utf-8 -*-
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Assignment 3</title>
+<style>
+
+.diva{
+color:#4c4c4c;
+}
+.overskrift{
+color:#393837;
+}
+body{
+background:#fff;
+}
+.art-body {
+font-size:medium;
+text-align:right;
+float:right;
+color: #444546;
+	}
+	a:link {color:#db2828;}      /* unvisited link */
+a:visited {color:#db2828;}  /* visited link */
+a:hover {color:#b60f0f;}  /* mouse over link */
+a:active {color:#b60f0f;}  /* selected link */
+	
+h1{
+font-size:30px;
+margin:0px;
+margin-top:2px;
+margin-left:0px;
+font-family: Calibri Light, Verdana, Tahoma, sans-serif;  
+
+}
+h4{
+font-size:18px;
+margin:0px;
+margin-top:2px;
+margin-left:0px;
+font-family: Calibri Light, Verdana, Tahoma, sans-serif;  
+
+}
+#tekst{
+width: 80%;
+}
+input, textarea {   
+    padding: 9px;  
+    border: solid 1px #E5E5E5;  
+    outline: 0;  
+    font: normal 13px/100% Verdana, Tahoma, sans-serif;  
+    width: 90%;  
+    background: #FFFFFF;  
+    } 
+textarea{
+height: 200px
+}
+
+.error{
+color:#e31c1c;
+}
+input:hover, textarea:hover,  
+input:focus, textarea:focus {   
+    border-color: #C9C9C9;   
+    }
+	.form label {   
+    margin-left: 10px;   
+    color: #999999;   
+    } 
+.submit input {  
+    width: auto;  
+    padding: 9px 15px;  
+    background: #dc2828;  
+    border: 0;  
+    font-size: 14px;  
+    color: #FFFFFF;  
+    }
+.submit input:hover {  
+    color: #FFFFFF;
+	background: #bf1414; 
+    }
+.nice {
+font: normal 13px/100% Verdana, Tahoma, sans-serif;  
+    width: auto;  
+    border: 0;  
+    font-size: 14px;  
+    color:#db2828;  
+    }
+.nice:link {  
+   color:#db2828;
+	text-decoration:none;
+    }
+.nice:visited {  
+   color:#db2828
+    }
+.nice:hover {  
+    color:#b60f0f;
+    }
+h3{
+font-size:22px;
+padding:0px;
+margin-bottom:0px;
+color:bf2929;
+margin-top:10px;
+font-family: Calibri Light, Verdana, Tahoma, sans-serif;  
+}
+h2{
+font-size:25px;
+color: 921b1b;
+padding:0px;
+margin-bottom:0px;
+margin-top:10px;
+font-family: Calibri Light, Verdana, Tahoma, sans-serif;  
+}
+#content{
+border: 1px solid;
+	border-color: #e4e4e4;
+position:relative;
+top:60px;
+width:800px;
+margin-left:auto;
+margin-right:auto;
+background-color: #fbfbfb;
+-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+#content2{
+padding:1em;
+
+}
+#content3{
+width:800px;
+margin-left:auto;
+margin-right:auto;
+
+}
+a:link {color:#db2828;}      /* unvisited link */
+a:visited {color:#db2828;}  /* visited link */
+a:hover {color:#b60f0f;}  /* mouse over link */
+a:active {color:#b60f0f;}  /* selected link */
+#top {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 50px;
+	background-color: #f9f9f9;
+	border-bottom: 1px solid;
+	border-color: #e4e4e4;
+}
+.top2 {
+
+border-bottom: 1px solid;
+	border-color: #d9d7d7;
+
+	}
+.art-title {
+font-size:x-large;
+font-weight:bold;
+
+text-align:left;
+display:inline-block;
+	}	
+</style>
+</head>
+<body>
+
+<div class="diva" id="top"><div id="content3"><h1> {% block overskrift %}{% endblock %}</h1></div></div>
+<div class="diva" id="content">
+<div class="diva" id="content2">
+
+{% block blink %}{% endblock %} {% block json %}{% endblock %}
+{% block body %}{% endblock %}
+{% block link %}{% endblock %}
+
+</div>
+</div>
+</body>
+
+</html>

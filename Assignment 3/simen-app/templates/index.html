@@ -1,85 +1,104 @@
-<html>
-<head>
-<title>Assignment 3</title>
-<style>
-.diva{
-color:#4c4c4c;
-}
-.overskrift{
-color:#393837;
-}
-h1{
-font-size:30px;
-margin:0px;
-margin-top:2px;
-margin-left:5px;
+{% extends "base.html" %}
 
-}
-h3{
-font-size:20px;
-padding:0px;
-margin-bottom:0px;
-margin-top:10px;
-}
-#content{
-position:relative;
-top:60px;
-width:800px;
-margin-left:auto;
-margin-right:auto;
-background-color: #f9f9f9;
--moz-border-radius: 10px;
-	border-radius: 10px;
-}
-#content2{
-padding:1em;
-
-}
-#content3{
-width:800px;
-margin-left:auto;
-margin-right:auto;
-
-}
-a:link {color:#db2828;}      /* unvisited link */
-a:visited {color:#db2828;}  /* visited link */
-a:hover {color:#b60f0f;}  /* mouse over link */
-a:active {color:#b60f0f;}  /* selected link */
-#top {
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	width: 100%;
-	height: 50px;
-	background-color: #f9f9f9;
-	border-bottom: 1px solid;
-	border-color: #e4e4e4;
-}
-</style>
-</head>
-<body>
-<div class="diva" id="top"><div id="content3"><h1>Assignment 3</h1></div></div>
-<div class="diva" id="content">
-<div class="diva" id="content2">
-
+{% block overskrift %}Assignment 3{% endblock %}
+{% block body %}
+<h2>Overview</h2>
+<Blockquote>
+<h4>Problem Set 2: </h4>
+- <a class="nice" href="/problem-set-2"> ROT13</a>
+<br>- <a class="nice" href="/problem-set-2/signup"> USER SIGNUP</a>
+<h4>Problem Set 3:</h4>
+- <a class="nice" href="/blog"> BLOG</a><br>
+- <a class="nice" href="/blog/newpost"> NEW POST</a>
+<h4>Problem Set 4:</h4> 
+- <a href="/blog/signup" class="nice"> SIGNUP</a><br>
+- <a href="/blog/login" class="nice">LOGIN</a>
+<h4>Problem Set 5: </h4>
+- <a class="nice" href="/blog/.json"> LINK TO JSON</a><br>
+- <a class="nice" href="/blog/5665117697998848.json"> LINK TO JSON ON A PERMALINK</a>
+</Blockquote>
+<h2>Description</h2>
+<Blockquote>
 <h3>Problem set 2</h3>
-- <a href=/problem-set-2> rot13</a><br>
-- <a href=/problem-set-2/signup>User signup</a> (returns welcome page after submission)<br>
+<Blockquote>
+<h4>ROT13</h4>
+<div id="tekst"><em>With rot13 you can type in letters and words and it will rotate them 13 places forward in the alphabet
+</em><br>
+
+ </div>
+<a class="nice" href="/problem-set-2"> [LINK TO ROT13]</a><br></Blockquote>
+<Blockquote>
+<h4>User signup</h4>
+<div id="tekst"><em>Signup lets a user signup with a username, password, and a email(optional). 
+If a user signup successfully, a welcome page is returned
+</em>To successfully signup, you will need to follow these rules:
+<br>
+&bull; Username: must contain no spaces and have a minimum length of 4 characters
+<br>
+&bull; Password: Minimum length of 6 characters, validate by retyping the password
+<br>
+&bull; Email: is optional, but if you choose to have one, it needs to be a correct email
+ </div>
+<a class="nice" href="/problem-set-2/signup">[LINK TO USER SIGNUP]</a><br></Blockquote>
+
 <h3>Problem set 3</h3>
-- <a href=/blog> Blog</a><br>
-- <a href=/blog/newpost> New post</a> (returns a permalink after submission)<br>
+<Blockquote>
+<h4>The blog</h4>
+<div id="tekst"><em>The blog is a blog that simply shows you blogposts. It shows you the 10 most recent blog posts. Each blogpost is stored in a database</em>
+<br>
+Updates:
+<br>
+&bull; You can create a new post via the blog
+
+
+<br>
+&bull; You can watch the json via the blog
+<br>
+ </div>
+<a class="nice" href="/blog"> [LINK TO BLOG]</a><br></Blockquote>
+<Blockquote>
+<h4>The blog</h4>
+<div id="tekst"><em>Here you can create a new blogpost by filling in the subject and the content in the form(both needs to be filled in) 
+After submitted, you will recieve a permalink that shows you the newly added blogpost</em>
+ </div>
+<a class="nice" href="/blog/newpost"> [LINK TO NEW POST]</a><br></Blockquote>
+
 
 <h3>Problem set 4</h3>
-- <a href=/blog/signup> Signup</a><br>
-- <a href=/blog/login> Login</a><br>
+<Blockquote>
+<h4>Signup</h4>
+<div id="tekst"><em>Signup lets a user signup with a username, password, and a email(optional). It stores the user data in a database, 
+and after signing up the user gets logged in and a cookie is set for the user</em><br>
+To successfully signup, you will need to follow these rules:
+<br>
+&bull; Username: must contain no spaces and have a minimum length of 4 characters
+<br>
+&bull; Password: Minimum length of 6 characters, validate by retyping the password
+<br>
+&bull; Email: is optional, but if you choose to have one, it needs to be a correct email
+ </div>
+<a href="/blog/signup" class="nice"> [LINK TO SIGNUP]</a><br></Blockquote>
+<Blockquote>
+<h4>Login</h4>
+<div id="tekst"><em>Login lets a user that already have signed up login. When successfully logged in, a cookie is made for the user, 
+and the user would have to hit logout to login/signup again </em><br>
+To successfully login, you will need to follow these rules:
+<br>
+&bull; Username: must be stored in the database(same username as signing up)
+<br>
+&bull; Password: same as above
+ </div>
+<a href="/blog/login" class="nice">[LINK TO LOGIN]</a><br></Blockquote>
 <h3>Problem set 5</h3>
-- <a href=/blog/.json> Json on blog</a> (and on permalink - Problem set 3: New post)
 
-<br><br><br>
-<h3>Etc</h3>
-- <a href=/birthday> Birthday form and validation</a><br>
-</div>
-</div>
-</body>
+<Blockquote>
+<h4>json on blog</h4>
+<div id="tekst"><em>Here you can watch the json of all the blogposts and on a permalink, you can also create a new post, and after receiving the permapage type .json at the end of the url</em>
+ </div>
+<a class="nice" href="/blog/.json"> [LINK TO JSON]</a>
+<a class="nice" href="/blog/5665117697998848.json"> [LINK TO JSON ON A PERMALINK]</a></Blockquote>
+</Blockquote>
+{% endblock %}
 
-</html>
+
+

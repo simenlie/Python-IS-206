@@ -1,12 +1,13 @@
-<!DOCTYPE html>
+{% extends "base.html" %}
 
-<html>
-<head>
-<title>simen</title>
-</head>
-<style type="text/css"></style>
-<body>
+{% block overskrift %}<a href="/"><img src="../home.png"></a> Welcome{% endblock %}
+{% block body %}
 <h1>Welcome, {{b.username}}</h1>
-</body>
-</html>
+<br>
+{% endblock %}
+{% block link %}<a href=../> Back</a> | <a href=logout> Logout</a>{% endblock %}
+
+
+
+
 
