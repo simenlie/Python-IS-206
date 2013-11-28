@@ -13,8 +13,14 @@ Mens du spiller vil scoren din øke, samt at du vil få nye items.
 Hvis du dør eller vinner og velger spill igjen, vil du få med din forrige score,
 slik at du kan prøve å slå din gamle score.
 <h4>Instruksjoner</h4>
+
   - git clone
-  - Skrive inn $env:PYTHONPATH = "$env:PYTHONPATH;." (PowerShell)
+  - Skrive inn i PowerShell:
+
+```PowerShell
+    $env:PYTHONPATH = "$env:PYTHONPATH;."
+```
+
   - Kjøre bin/app.py
   - Åpne localhost og spill
   - (sessions blir lagret i /sessions -og kan slettes fra denne mappen, hvis ønskelig)
@@ -47,6 +53,5 @@ Spillet har totalt 6 tester.
   - hidden
   - back
 
-App Engine
-==========
+<h2>App Engine</h2>
   - http://simen-app.appspot.com/
