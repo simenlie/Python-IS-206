@@ -56,7 +56,7 @@ Spillet har totalt 6 tester.
 ```PowerShell
     play, clock, east, north, phone, yes, sail, south, sword, point, slay, point, slay, point, slay, point, slay, sail, hidden, back
 ```
-
+kommandoene kan formuleres på andre måter("play with them" etc) 
 
 <h2>App Engine</h2>
   - http://simen-app.appspot.com/
