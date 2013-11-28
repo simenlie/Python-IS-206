@@ -18,10 +18,15 @@ slik at du kan prøve å slå din gamle score. Du kan skrive kommandoer på fors
 Spillet har en enkel parser som forstår enkle formuleringer av den samme tingen.
 
 Eksempel på kommandoer som tolkes likt:
-  - phone
-  - use phone
-  - use the phone
-  - use the phone now
+```PowerShell
+    - phone
+    - use phone
+    - use the phone
+    - use the phone now
+    
+    - drop the phone #vil ikke fungere
+```
+
 
 <h4>Instruksjoner</h4>
 
