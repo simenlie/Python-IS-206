@@ -15,15 +15,19 @@ slik at du kan prøve å slå din gamle score.
 <h4>Instruksjoner</h4>
 
   - git clone
-  - Skrive inn i PowerShell:
-
-```PowerShell
-    $env:PYTHONPATH = "$env:PYTHONPATH;."
-```
-
+  - Skrive inn $env:PYTHONPATH = "$env:PYTHONPATH;." (PowerShell)
   - Kjøre bin/app.py
   - Åpne localhost og spill
   - (sessions blir lagret i /sessions -og kan slettes fra denne mappen, hvis ønskelig)
+
+PowerShell:
+```PowerShell
+    $env:PYTHONPATH = "$env:PYTHONPATH;."
+    cd path/to/game/folder
+    python bin/app.py
+```
+
+ 
 
 <h4>Tester</h4>
 Spillet har totalt 6 tester.
