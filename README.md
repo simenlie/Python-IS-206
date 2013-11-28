@@ -7,8 +7,13 @@ Python-IS-206
 - App-engine
 
 <h2>Exercise 22</h2>
+*What Do You Know So Far?*
+
+All the words and symbols are written in a word(.doc) document
 <h2>Exercise 26</h2>
+*Fix someone elses code*
 <h2>Exercise 45</h2>
+*You Make a Game*
 <h2>Exercise 52</h2>
 <h4>Om spillet</h4>
 Det første du gjør er å velge et map og lage et brukernavn.
