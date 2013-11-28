@@ -17,7 +17,7 @@ Hvis du dør eller vinner og velger spill igjen, vil du få med din forrige scor
 slik at du kan prøve å slå din gamle score. Du kan skrive kommandoer på forskjellige måter. 
 Spillet har en enkel parser som forstår enkle formuleringer av den samme tingen.
 
-Eksempel på kommandoer som tolkes likt:
+Eksempel på input som tolkes likt:
 ```PowerShell
     - phone
     - use phone
@@ -26,7 +26,8 @@ Eksempel på kommandoer som tolkes likt:
     
     - drop the phone #vil ikke fungere
 ```
-
+Kommandoer som HELP etc må skrives ordrett (men ikke case sensitiv)
+yes, no må skrives ordrett
 
 <h4>Instruksjoner</h4>
 
