@@ -9,11 +9,11 @@ Python-IS-206
 <h2>Exercise 22</h2>
 *What Do You Know So Far?*
 
-All the words and symbols are written in a word(.doc) document
+Alle ordene og symbolene er skrevet i et word(.doc) dokument
 <h2>Exercise 26</h2>
 *Fix someone elses code*
 
-The fixes i have made is commented in the code
+Det jeg har fikset er kommentert i koden
 <h2>Exercise 45</h2>
 *You Make a Game*
 
