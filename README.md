@@ -12,12 +12,21 @@ Python-IS-206
 All the words and symbols are written in a word(.doc) document
 <h2>Exercise 26</h2>
 *Fix someone elses code*
+
 The fixes i have made is commented in the code
 <h2>Exercise 45</h2>
 *You Make a Game*
+
+<h4>Instruksjoner</h4>
+For å kjøre spillet
+
+```PowerShell
+    cd path/to/game/folder
+    python Engine.py
+```
 <h2>Exercise 52</h2>
 <h4>Om spillet</h4>
-Det første du gjør er å velge et map og lage et brukernavn.
+Det første du gjør er å velge et map, en hero og lage et brukernavn.
 Mens du spiller vil scoren din øke, samt at du vil få nye items.
 Hvis du dør eller vinner og velger spill igjen, vil du få med din forrige score,
 slik at du kan prøve å slå din gamle score. Du kan skrive kommandoer på forskjellige måter. 
@@ -36,7 +45,7 @@ Kommandoer som HELP etc må skrives ordrett (men ikke case sensitiv)
 yes, no må skrives ordrett
 
 <h4>Instruksjoner</h4>
-
+For å teste å kjøre spillet må følgende gjøres:
   - git clone
   - Skrive inn $env:PYTHONPATH = "$env:PYTHONPATH;." (PowerShell)
   - Kjøre bin/app.py
@@ -51,15 +60,15 @@ PowerShell:
 ```
 
  
-
 <h4>Tester</h4>
 Spillet har totalt 6 tester.
-    - WEB (at vi får riktig respons meldinger og kan poste)
-    - Rom test (om et rom kan opprettes)
-    - Stiene til et rom fungerer å oppprette
-    - Om det fungerer å navigere på stiene(go)
-    - Om hele spillet fungerer (fra start til mål)
-    - Input prosessering(phone, use phone, use the phone = phone)
+
+  - WEB (at vi får riktig respons meldinger og kan poste)
+  - Rom test (om et rom kan opprettes)
+  - Stiene til et rom fungerer å oppprette
+  - Om det fungerer å navigere på stiene(go)
+  - Om hele spillet fungerer (fra start til mål)
+  - Input prosessering(phone, use phone, use the phone = phone)
 
 
 <h4>Nyttige kommandoer</h4>
