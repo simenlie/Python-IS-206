@@ -105,7 +105,7 @@ the_bridge.add_paths({
 })
 the_bridge.add_objects(["bomb"])
 laser_weapon_armory.add_paths({
-    'cave': the_bridge,
+    '123': the_bridge,
     '*': generic_death
 })
 

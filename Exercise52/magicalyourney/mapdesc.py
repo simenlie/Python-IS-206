@@ -30,7 +30,7 @@ Lacks arms, has hands; lacks a head but has a face.'"""
 
 eng_clock = """Congratulations! that was the correct answer! You won a boat"""
 # a list with all the death scenarios for the room (in same order as levels in the room)
-eng_list = ["You walk away and dies","Thats not correct, you lost the game, you walking around until you die..."]
+eng_list = ["You Try to kill them. They shoot you in the head","Thats not correct, you lost the game, you walking around until you die..."]
 
 #Boat room
 boatd = """You are on your boat, in the middle of the ocean.

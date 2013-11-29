@@ -29,8 +29,7 @@ england.add_objects(["them"])
 
 england.add_levels({
 	'play': mapdesc.eng_play,
-	'kill': "death",
-	'joke': "death"
+	'kill': "death"
 })
 
 england.add_levels({

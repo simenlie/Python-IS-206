@@ -143,6 +143,10 @@ def check_utf8_alpha(input):
 	for word in list:
 		if not word.isalpha():
 			returning = False
+	if len(list) == 1:
+		word = str(input)
+		if word.isdigit():
+			returning = True
 	return returning		
 # runs trough the input and strips away all the stop words
 # Returns the list wihtout the stop words
