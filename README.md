@@ -24,6 +24,9 @@ For å kjøre spillet
     cd path/to/game/folder
     python Engine.py
 ```
+<h4>Om spillet</h4>
+Spillet bruker de samme modulene/filene(lexicon, inputAlgo og parser) til user input som jeg har laget i Exercise 52
+
 <h2>Exercise 52</h2>
 <h4>Om spillet</h4>
 Det første du gjør er å velge et map, en hero og lage et brukernavn.
