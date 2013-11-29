@@ -12,6 +12,7 @@ Python-IS-206
 All the words and symbols are written in a word(.doc) document
 <h2>Exercise 26</h2>
 *Fix someone elses code*
+The fixes i have made is commented in the code
 <h2>Exercise 45</h2>
 *You Make a Game*
 <h2>Exercise 52</h2>
@@ -53,8 +54,12 @@ PowerShell:
 
 <h4>Tester</h4>
 Spillet har totalt 6 tester.
-  - Sjekker input prosessering
-
+    - WEB (at vi får riktig respons meldinger og kan poste)
+    - Rom test (om et rom kan opprettes)
+    - Stiene til et rom fungerer å oppprette
+    - Om det fungerer å navigere på stiene(go)
+    - Om hele spillet fungerer (fra start til mål)
+    - Input prosessering(phone, use phone, use the phone = phone)
 
 
 <h4>Nyttige kommandoer</h4>
