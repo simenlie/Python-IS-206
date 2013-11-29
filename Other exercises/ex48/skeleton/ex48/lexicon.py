@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 dir= ["north","south","east","west","down","up","left","right","back"]
-verbs = ["go","stop","kill","eat"]
-stop = ["the","in","of","from","at","it"]
-nouns = ["door","bear","princess","cabinet"]
+verbs = ["go","play","stop","kill","eat","use","open","make","take"]
+stop = ["the","in","of","from","at","it","trough","with","now","i","want","a","to"]
+nouns = ["door","bear","princess","cabinet","phone", "them"]
 
 def convert_number(s):
     try:

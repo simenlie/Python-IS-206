@@ -7,7 +7,7 @@ $def with (room,player,user)
 		</div>
 <div id="top3">
 			<div id="top4" class="overskrift2">
-				$user.name | Items: $player.items | Score: $player.score | to beat: $user.score | Crew: $player.crew
+				$user.name ($player.name) | Inventory: $player.items | Score: $player.score | to beat: $user.score | Crew: $player.crew
 						</div>
 						<div id="top5" class="overskrift2">
 				$if room.obstacle:		
@@ -20,16 +20,20 @@ $def with (room,player,user)
 			<div class="overskrift">
 				$room.name
 			</div>
-			<p>
+			
+			<p class="bryt">
 				$room.description
 			</p>
-$if player.dead:
+$if player.dead or room.name == "death":
 	<p class="dead">$player.deadMessage</p>
-    <p><a href="/">Play Again?</a></p>
+    <p><a href="/">Play Again</a> | <a href="/resetU">Play Again with new user</a></p>
 $elif room.won:
 	<p class="cola">$room.curAction</p>
-	<p><a href="/reset">Play Again?</a></p>
+	<p><a href="/reset">Play Again</a></p>
 $else:
+			<p class="cola2">$user.input</p>
+			$if room.lastAction != room.curAction:
+				<p class="cola">$room.lastAction</p>
 			<p class="cola">$room.curAction</p>
 			$if room.commands:
 				$if not room.obstacle:
@@ -38,9 +42,9 @@ $else:
 
 	<div id="imga">
 
-	<form action="/game" method="POST">
-	<input type="text" name="action"> <input type="SUBMIT">
-    </form>
+	<form action="/game" method="POST" autocomplete="off">
+	<span>> <input type="text" autocomplete="off" name="action"/></span> 
+	</form>
     
 </div>
 </div>

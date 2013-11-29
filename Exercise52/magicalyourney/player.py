@@ -1,50 +1,34 @@
+#
+# Author Simen Lie 2013
+#
+# This is the player module
+# This module defines a game, user, and creates the objects in the game(Player,Dragon)
+# You can choose from two different maps  and two different players (Musclo, Fasto)
+from magicalyourney.objects import *
+import random
+
+# This class is used to store and keep all the players(name and score) in a list
+# So that we can access it in the game
+class Game(object):
+	def __init__(self):
+		self.players = []
+	def add_player(self,player):
+		self.players.append("%s : %s" %(player.name, player.score))
+
+# The User class represents the user that plays the game
+# Its used to store a name, recent score and the last input the user typed
 class User(object):
 	def __init__(self, name):
 		self.name = name
+		self.input = ""
 		self.score = 0
 
-class Player(object):
-	def __init__(self, name):
-		self.name = name
-		self.score = 0
-		self.items = []
-		self.crew = 20
-		self.dead = False
-		self.deadMessage = None
-		
-class Dragon(object):
-	def __init__(self,name):
-		self.name = name
-		self.close = False
-		self.hp = 100
-		self.weakness = 20
-	def action(self,action,player):
-		if "Sword" not in player.items:
-			player.dead = True
-			player.deadMessage = "An invisible sword? Dont think so... You run, but the dragon kills you"
-			return "hey"
-		if action == "slay" and self.close:
-			self.hp -= self.weakness
-			if self.hp < 1:
-				self.hp = 0
-				return "you slayed the dragon. Its dead"
-			else:
-				self.weakness += 7
-			self.close = False
-			return "You injured the dragon. It flies up high"
-		elif action =="point":
-			self.close = True
-			return "The dragon comes down in front of you"
-		else:
-			if "help" in action:
-				return "slay, point"
-			player.crew -= 5
-			if player.crew == 0:
-				player.dead = True
-				player.deadMessage = "All of the crew are gone. The dragon targets you. Fire....You die"
-			return "You cant slay the dragon, its too far away. It killed 5 of your crew. Maybe you could point at it..."
-			
-
-dragon = Dragon("Evil Dragon")		
-player1 = Player("player1234")
+#Creating the objects in the game defined in the objects.py module		
+dragon = Dragon("Evil Dragon")
+#The different heros the user can choose from and a list with the "start-items"
+player1 = Musclo("Musclo",["phone"])
+player2 = Fasto("Fasto",["phone"])
+#Default user
 user1 = User("user1234")
+#The Game object
+game1  = Game()

@@ -1,20 +1,14 @@
+#
+# Author Simen Lie 2013
+#
+# The Sentence class, and the parsing methods is based on learnpythonthehardway
+# This class parses a sentence.
+
 import lexicon
 import inputAlgo
 
 class ParserError(Exception):
     pass
-
-class Respond(object):
-	def __init__(self, subject, verb, object):
-		self.subject = subject[1]
-		self.verb = verb[1]
-		self.object = object[1]
-		
-def build_response(sa):
-	if sa.is_noun == True:
-		print "%s, you cant %s the %s" % (sa.subject, sa.verb, sa.object)
-	else:
-		print "%s, you cant %s %s" % (sa.subject, sa.verb, sa.object)
 
 class Sentence(object):
 	def __init__(self, subject, verb, object,is_noun):
@@ -22,15 +16,14 @@ class Sentence(object):
 		self.verb = verb[1] #go
 		self.object = object[1] #door /north
 		self.is_noun = is_noun
-
-
+		
+# --PARSING FUNCTIONS FROM learnpythonthehardway --
 def peek(word_list):
 	if word_list:
 		word = word_list[0]
 		return word[0]
 	else:
 		return None
-
 
 def match(word_list, expecting):
 	if word_list:
@@ -42,11 +35,9 @@ def match(word_list, expecting):
 	else:
 		return None
 
-
 def skip(word_list, word_type):
 	while peek(word_list) == word_type:
 		match(word_list, word_type)
-
 
 def parse_verb(word_list):
 	skip(word_list, 'stop')
@@ -54,7 +45,6 @@ def parse_verb(word_list):
 		return match(word_list, 'verb')
 	else:
 		raise ParserError("Expected a verb next.")
-
 
 def parse_object(word_list):
 	skip(word_list, 'stop')
@@ -80,7 +70,6 @@ def parse_subject(word_list, subj):
 	obj = parse_object(word_list)
 	return Sentence(subj, verb, obj,is_noun)
 
-
 def parse_sentence(word_list):
 	skip(word_list, 'stop')
 	start = peek(word_list)
@@ -92,36 +81,13 @@ def parse_sentence(word_list):
 	else:
 		raise ParserError("Must start with subject, object, or verb not: %s" % start)
 		
-def starter(user):
-	list = user.split()
-	if len(list) > 1:
-		sent = parse_sentence(lexicon.scan(user))
-		build_response(sent)
-	else:
-		tin = lexicon.scan(user)
-		if tin[0][0] == 'verb':
-			print "%s is not sufficient. You must also supply a object" % tin[0][1]
-		else:
-			print "I dont uderstand that"
-		
-#user = raw_input()
-#starter(user)
+# --MY FUNCTIONS--
 
-
-#Testing the advanced input functionality
-
-
-
-	#build_response(sent)
-
-
-
-#if sent[0][0] == "error":
-#	print "ERrrr"
-
-
+# This function will determine if the input is a valid sentence
+# Returns True if it is and False otherwise		
 def valid_sent(input):
 	sent = lexicon.scan(input)
+	# Sets the starting values of these to be 1000, since we dont want it to be 0 initially
 	verb_index = 1000
 	object_index = 1000
 	stop_count = 0
@@ -137,44 +103,53 @@ def valid_sent(input):
 		if item[0] == "stop" and object_index > i:
 			stop_count += 1
 	total_count = stop_count + verb_count
+	# If the object in the sentence is presented right after the verb
+	# adding the stopcount.
+	# the total_count let us return false, if the user types "go north north"( want the user to type "go north")
 	if object_index == verb_index + 1 + stop_count and total_count < 3:
+		return True
+	# If the verb in the sentence is presented right after the object 
+	# and the total_count is greater than 2 ("i play them")
+	# adding the stopcount.
+	elif verb_index == object_index + 1 + stop_count and total_count > 2:
 		return True
 	else:
 		return False
 
-#If for instance the user types a direction two times north north, the function will allow this
-def make_valid_sent(input):
-	sent = lexicon.scan(input)
-	verb = ""
-	object =""
-	for word in sent:
-		if word[0] == "verb":
-			verb = word
-		elif word[0] == "noun" or word[0] == "direction":
-			object = word
-			
-		
-#test case
-#while(True):
-#	input = raw_input()
-#	ignore_case = input.lower()
-#	if len(ignore_case.split()) == 1:
-#		print inputAlgo.simple_resp(ignore_case, inputAlgo.levels)
-#	else:
-#		if valid_sent(ignore_case):
-	#		sent = parse_sentence(lexicon.scan(ignore_case))
-	#		print inputAlgo.respond_dir(sent,inputAlgo.levels,lexicon,0)
-	#	else:
-	#		print inputAlgo.get_error_message()
-			
-def process_input(input, lista):
-	ignore_case = input.lower()
-	if len(ignore_case.split()) == 1:
-		return inputAlgo.simple_resp(ignore_case, inputAlgo.levels)
-	else:
-		if valid_sent(ignore_case):
-			sent = parse_sentence(lexicon.scan(ignore_case))
-			return inputAlgo.respond_dir(sent,lista,lexicon,0)
+# This function takes three paramters; input, a list lista and a list objects
+# It used the parse sentence to parse a sentence and the inputAlgo module to get 
+# a proper response message
+# returns the parsed sentence	
+def process_input(input, lista, objects):
+	if check_utf8_alpha(input):
+		if input in lexicon.dir:
+			input = "go " + input 
+		ignore_case = input.lower()
+		temp = check_stop(ignore_case)
+		if len(temp) == 1:
+			return inputAlgo.simple_resp(temp[0], lista)
 		else:
-			return inputAlgo.get_error_message()
-	
+			if valid_sent(ignore_case):
+				sent = parse_sentence(lexicon.scan(ignore_case))
+				return inputAlgo.respond_dir(sent,lista,lexicon,objects)
+			else:
+				return inputAlgo.get_error_message()
+	else:
+		return "Invalid input. Letters and numbers only please."
+# Checks if the input is valid ascii, and not non english letters or symbols		
+def check_utf8_alpha(input):
+	list = input.split()
+	returning = True
+	for word in list:
+		if not word.isalpha():
+			returning = False
+	return returning		
+# runs trough the input and strips away all the stop words
+# Returns the list wihtout the stop words
+def check_stop(input):
+	sent = lexicon.scan(input)
+	temp_list = []
+	for word in sent:
+		if word[0] != "stop":
+			temp_list.append(word[1])
+	return temp_list

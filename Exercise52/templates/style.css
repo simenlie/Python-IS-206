@@ -66,6 +66,18 @@ p {
 	border-radius: 3px;
 }
 
+input:hover, text:hover,  
+input:focus, text:focus {   
+    border-color: #C9C9C9;   
+    }
+input{
+padding: 10px;
+}
+	.form label {   
+    margin-left: 10px;   
+    color: #999999;   
+    } 
+
 ul {
 	float: right;
 	font-family: 'Calibri Light';
