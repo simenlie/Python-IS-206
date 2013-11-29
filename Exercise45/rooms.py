@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import language
 from sys import exit
+import parsera
 
 def get_room_list():
 	return {'england': England(),
@@ -38,6 +39,7 @@ class England(object):
 		print country.get('sub_title4')
 		
 		action = raw_input("> ")
+		action = parsera.process_input(action, ["play"], ["them"])
 		print '-' * 10
 
 		if action == country.get('command1'):
@@ -47,6 +49,7 @@ class England(object):
 			print "\"This thing runs but cannot walk, sometimes sings but never talks. "
 			print "Lacks arms, has hands; lacks a head but has a face.\""
 			action = raw_input("> ")
+			action = parsera.process_input(action, ["clock"], [])
 			print '-' * 10
 			if action == "clock":
 				print "You won a boat : + %s XP" % self.roomPoints
@@ -92,13 +95,14 @@ class Boat(object):
 		else:
 			print options
 		action = raw_input("> ")
+		action = parsera.process_input(action, ["nord","sor","hidden"], [])
 		if action == "nord":
 			if visited['gold_island']:
 				print "Already been here"
 				return 'boat'
 			else:
 				return 'gold_island'
-
+		
 		elif action == "sor":
 			return 'dragon_island'
 		elif action == "hidden" and points >= 200:

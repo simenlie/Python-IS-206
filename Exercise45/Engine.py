@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import rooms
+import parser
 
 class Player(object):
 	def __init__(self, name, items, points, crew):
